@@ -5,8 +5,6 @@ const props = defineProps({
   storeId: String
 })
 const lifeStore = useLifeStore(props.storeId || 'life')
-
-console.log(props.storeId)
 </script>
 
 <template>
