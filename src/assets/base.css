@@ -1,0 +1,18 @@
+.w-15 {
+  width: 3.75rem;
+}
+.h-15 {
+  height: 3.75rem;
+}
+.radial {
+  background: radial-gradient(
+    circle at center,
+    rgb(132, 135, 150) 0,
+    rgb(73, 71, 71),
+    rgb(8, 8, 8) 100%
+  );
+}
+
+.exclude {
+  float: none; /* Or whichever direction you prefer */
+}

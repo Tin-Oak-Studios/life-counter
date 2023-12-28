@@ -7,34 +7,19 @@ const props = defineProps({
 })
 const storeId = props.storeId || 'life'
 
-const isMobile = !!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-  navigator.userAgent
-)
 const single = true
 </script>
 
 <template>
-  <div class="h-full w-full">
-    <div v-if="isMobile && single" class="h-full w-full">
-      <LifeDisplay :store-id="storeId" />
-      <div class="flex h-3/4 w-full flex-grow flex-row gap-2">
-        <LifeOps :store-id="storeId" />
-        <LifeDigits :store-id="storeId" />
-      </div>
-    </div>
-    <div v-else="isMobile">
-      <LifeDisplay :store-id="storeId" />
-      <div class="flex flex-row gap-2">
-        <LifeOps :store-id="storeId" />
-        <LifeDigits :store-id="storeId" />
-      </div>
-    </div>
-    <div v-else>
-      <LifeDisplay :store-id="storeId" />
-      <div class="flex flex-row gap-2">
-        <LifeOps :store-id="storeId" />
-        <LifeDigits :store-id="storeId" />
-      </div>
+  <div class="flex h-full w-full flex-col items-center bg-yellow-500">
+    <LifeDisplay :store-id="storeId" />
+    <div class="flex w-full flex-row gap-2">
+      <LifeOps :store-id="storeId" />
+      <LifeDigits :store-id="storeId" />
     </div>
   </div>
 </template>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+</style>

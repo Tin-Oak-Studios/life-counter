@@ -30,7 +30,9 @@ export const useLifeStore = (id: string) => defineStore({
     }
   },
   getters: {
-    displayValue: (state) => {
+    displayOperation: (state) => state.valueToOperate ? state.operation : '',
+    displayValue: (state) => state.valueToOperate.length ? state.valueToOperate : '',
+    displayExp: (state) => {
       let text = ''
       if (state.valueToOperate) {
         text = `${state.operation} ${state.valueToOperate}`
