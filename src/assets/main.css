@@ -1,10 +1,12 @@
 
 
 @import './base.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 #app {
+
 }

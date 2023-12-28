@@ -10,14 +10,16 @@ const lifeStore = useLifeStore(props.storeId || 'life')
 
 <template>
   <!-- Digits -->
-  <div class="grid w-3/4 grid-cols-3">
-    <div v-for="digit of digits" class="text-center last:col-span-3">
+  <div class="grid h-3/4 w-5/6 grid-cols-3">
+    <div v-for="digit of digits" class="flex justify-center text-center last:col-span-3">
       <button
         @click="() => lifeStore.digit(digit)"
-        class="radial h-24 w-24 justify-center rounded-full bg-red-500 text-2xl shadow-black transition delay-75 ease-in-out text-shadow hover:bg-gray-800 lg:text-4xl"
+        class="radial border-primary h-20 w-20 rounded-full border-2 text-center text-4xl shadow-black transition delay-75 ease-in-out text-shadow hover:bg-gray-800 md:h-[95%] md:w-[95%] lg:text-4xl"
       >
         {{ digit }}
       </button>
     </div>
   </div>
 </template>
+
+<style></style>
